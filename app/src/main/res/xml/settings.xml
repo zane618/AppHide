@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/preference_settings" >
+        <EditTextPreference
+            android:key="com.zhang.apphide.launch.password"
+            android:title="@string/preference_password"
+            android:summary="从拨号盘启动此App的密码"
+            android:defaultValue="#1234" />
+
+        <CheckBoxPreference
+            android:key="com.zhang.apphide.invisible"
+            android:title="@string/preference_invisible"
+            android:summary="隐藏后此App在启动菜单里将不可见"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preference_others">
+
+        <Preference android:title="@string/preference_about">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://github.com/blackbbc/Evil-Hide" />
+        </Preference>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

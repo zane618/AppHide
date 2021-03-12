@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AppHide</string>
+    <string name="action_settings">设置</string>
+
+    <string name="switch_label">隐藏</string>
+
+    <string name="preference_settings">设置</string>
+    <string name="preference_others">其他</string>
+    <string name="preference_password">启动密码</string>
+    <string name="preference_invisible">是否隐藏此App</string>
+    <string name="preference_about">关于</string>
+
+    <string-array name="spinner_arrays">
+        <item>常用应用</item>
+        <item>被隐藏应用</item>
+        <item>所有应用</item>
+    </string-array>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.zhang.apphide.viewmodel.AppViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{viewModel::onClickApp}">
+
+        <ImageView
+            android:id="@+id/appIconImg"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            app:drawable="@{viewModel.appIcon}"/>
+
+        <TextView
+            tools:text="牛郎店的危险游戏"
+            android:text="@{viewModel.appName}"
+            android:layout_toRightOf="@+id/appIconImg"
+            android:layout_toEndOf="@+id/appIconImg"
+            android:layout_toLeftOf="@+id/addBtn"
+            android:layout_toStartOf="@+id/addBtn"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_toLeftOf="@+id/starBtn"
+            android:layout_toStartOf="@+id/starBtn"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_add"
+            android:onClick="@{viewModel::onClickAdd}"/>
+
+        <com.github.ivbaranov.mfb.MaterialFavoriteButton
+            android:id="@+id/starBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_toLeftOf="@+id/switchBtn"
+            android:layout_toStartOf="@+id/switchBtn"
+            app:favorite="@{viewModel.isStar}"
+            app:mfb_type="heart" />
+
+        <Switch
+            android:id="@+id/switchBtn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checked="@{viewModel.isHidden}"/>
+
+    </RelativeLayout>
+</layout>
