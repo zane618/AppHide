@@ -8,7 +8,6 @@ import android.preference.PreferenceManager
 import com.zhang.apphide.MainActivity
 import com.zhang.apphide.config.Settings
 import com.zhang.apphide.ProxyActivity
-
 class CallReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         var phoneNumber: String? = resultData
